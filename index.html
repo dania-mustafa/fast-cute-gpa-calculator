@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST SGPA Calculator </title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="calculator-card">
+        <h2>💫 SGPA Calculator 💫</h2>
+        <p class="subtitle">FAST-NUCES GPA Calculator</p>
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th style="width: 40%;">Course Name</th>
+                    <th style="width: 25%;">Credit Hours</th>
+                    <th style="width: 25%;">Grade</th>
+                    <th style="width: 10%;"></th>
+                </tr>
+            </thead>
+            <tbody id="courseRows">
+                <tr>
+                    <td><input type="text" placeholder="Course Name"></td>
+                    <td>
+                        <select class="credit-hours">
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                            <option value="4">4</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="grade-select">
+                            <option value="4.00">A+</option>
+                            <option value="4.00">A</option>
+                            <option value="3.67">A-</option>
+                            <option value="3.33">B+</option>
+                            <option value="3.00">B</option>
+                            <option value="2.67">B-</option>
+                            <option value="2.33">C+</option>
+                            <option value="2.00">C</option>
+                            <option value="1.67">C-</option>
+                            <option value="1.33">D+</option>
+                            <option value="1.00">D</option>
+                            <option value="0.00">F</option>
+                        </select>
+                    </td>
+                    <td><button class="delete-btn" onclick="deleteRow(this)">🚩</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <button class="cute-btn add-btn" onclick="addCourseRow()">Add Course ➕</button>
+            <button class="cute-btn" onclick="calculateSGPA()">Calculate SGPA ✨</button>
+        </div>
+        <div class="result-box">
+            Your Semester GPA:
+            <span id="sgpaDisplay">-.--</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
